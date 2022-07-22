@@ -4,6 +4,7 @@ import {useTranslation} from 'react-i18next'
 import {useState} from 'react'
 import {format, formatDistance, formatRelative, subDays} from 'date-fns'
 import {fr} from 'date-fns/locale'
+import _ from 'lodash'
 
 function Accueil() {
   // ====== PARAMETRAGE ====== //
@@ -58,7 +59,7 @@ function Accueil() {
         <p>{formatDistanceToday}</p>
         <p>{formatRelativeToday}</p>
         <select value={selectedOption.value} onChange={handleChangeLanguage}>
-          {options.map(option => (
+          {_.sortBy(options, ['label']).map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
