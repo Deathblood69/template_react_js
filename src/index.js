@@ -8,9 +8,7 @@ import './locales/i18n'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <Template/>
-  </React.StrictMode>
+  <Template/>
 );
 
 // If you want to start measuring performance in your app, pass a function

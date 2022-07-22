@@ -5,35 +5,20 @@ import Accueil from "./public/accueil/Accueil";
 import {Expenses} from "./public/expenses/Expenses";
 import {Invoices} from "./public/invoice/Invoices";
 import {Invoice} from "./public/invoice/Invoice";
-import {useTranslation} from "react-i18next";
+import {Login} from "./public/login/Login";
 
 /**
  * Composant
  * @returns {JSX.Element}
  * @constructor
  */
-export const Template = () => {
-  // ====== PARAMETRAGE ====== //
-
-  const {i18n} = useTranslation()
-
-
-  // ====== VARIABLES ====== //
-
-  // ====== REQUETES ====== //
-
-  // ====== METHODES ====== //
-
-  // ====== USE EFFECT ====== //
-
-  // ====== AFFICHAGE ====== //
-
-  return <React.Fragment>
+export const Template = () => (
+  <React.Fragment>
     <Providers>
       <Routes>
-        <Route path="/" element={<Accueil/>}/>
-        <Route path="expenses" element={<Expenses/>}/>
-        <Route path="invoices" element={<Invoices/>}>
+        <Route path={"/"} element={<Accueil/>}/>
+        <Route path={"expenses"} element={<Expenses/>}/>
+        <Route path={"invoices"} element={<Invoices/>}>
           <Route
             index
             element={
@@ -42,8 +27,9 @@ export const Template = () => {
               </main>
             }
           />
-          <Route path=":invoiceId" element={<Invoice/>}/>
+          <Route path={":invoiceId"} element={<Invoice/>}/>
         </Route>
+        <Route path={'login'} element={<Login/>}/>
         <Route
           path="*"
           element={
@@ -55,4 +41,4 @@ export const Template = () => {
       </Routes>
     </Providers>
   </React.Fragment>
-}
+)
