@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink, Outlet, useSearchParams} from 'react-router-dom'
-import {getInvoices} from '../../../api/requetes-invoices'
+import {getInvoices} from '../../../data/data-invoices'
 
 /**
  * Composant

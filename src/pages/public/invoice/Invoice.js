@@ -1,6 +1,6 @@
 import React from 'react'
 import {useLocation, useNavigate, useParams} from 'react-router-dom'
-import {deleteInvoice, getInvoice} from '../../../api/requetes-invoices'
+import {deleteInvoice, getInvoice} from '../../../data/data-invoices'
 
 /**
  * Composant
