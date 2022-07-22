@@ -34,7 +34,7 @@ label {
 }
 
 input {
-  border: 2px solid rgba(0.67, 0.39, 0.00, 0.66);
+  border: 2px solid rgba(0.67, 0.39, 0, 0.66);
   border-radius: 4px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -70,5 +70,5 @@ button {
 
 button.disabled-btn {
   cursor: not-allowed;
-  background: rgba(0.67, 0.39, 0.00, 0.66);
+  background: rgba(0.67, 0.39, 0, 0.66);
 }

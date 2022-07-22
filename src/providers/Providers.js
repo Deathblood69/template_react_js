@@ -1,5 +1,5 @@
-import React, {Suspense} from 'react';
-import {BrowserRouter} from "react-router-dom";
+import React, {Suspense} from 'react'
+import {BrowserRouter} from 'react-router-dom'
 
 /**
  * Composant
@@ -8,8 +8,6 @@ import {BrowserRouter} from "react-router-dom";
  */
 export const Providers = ({children}) => (
   <Suspense fallback="loading">
-    <BrowserRouter>
-      {children}
-    </BrowserRouter>
+    <BrowserRouter>{children}</BrowserRouter>
   </Suspense>
 )

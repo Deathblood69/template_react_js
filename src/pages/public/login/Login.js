@@ -7,64 +7,62 @@ import '../../../css/Login.css'
  * @constructor
  */
 export const Login = () => {
-  // ====== PARAMETRAGE ====== //
-
   // ====== VARIABLES ====== //
 
-  const intialValues = {email: "", password: ""};
+  const intialValues = {email: '', password: ''}
 
-  const [formValues, setFormValues] = useState(intialValues);
+  const [formValues, setFormValues] = useState(intialValues)
 
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] = useState({})
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   // ====== METHODES ====== //
 
   const submit = useCallback(() => {
-    console.log(formValues);
+    console.log(formValues)
   }, [formValues])
 
   //input change handler
-  const handleChange = (e) => {
-    const {name, value} = e.target;
-    setFormValues({...formValues, [name]: value});
-  };
+  const handleChange = e => {
+    const {name, value} = e.target
+    setFormValues({...formValues, [name]: value})
+  }
 
   //form submission handler
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmitting(true);
-  };
+  const handleSubmit = e => {
+    e.preventDefault()
+    setFormErrors(validate(formValues))
+    setIsSubmitting(true)
+  }
 
   //form validation handler
-  const validate = (values) => {
-    let errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const validate = values => {
+    let errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
 
     if (!values.email) {
-      errors.email = "Cannot be blank";
+      errors.email = 'Cannot be blank'
     } else if (!regex.test(values.email)) {
-      errors.email = "Invalid email format";
+      errors.email = 'Invalid email format'
     }
 
     if (!values.password) {
-      errors.password = "Cannot be blank";
+      errors.password = 'Cannot be blank'
     } else if (values.password.length < 4) {
-      errors.password = "Password must be more than 4 characters";
+      errors.password = 'Password must be more than 4 characters'
     }
 
-    return errors;
-  };
+    return errors
+  }
 
   // ====== USE EFFECT ====== //
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmitting) {
-      submit();
+      submit()
     }
-  }, [formErrors, isSubmitting, submit]);
+  }, [formErrors, isSubmitting, submit])
 
   // ====== AFFICHAGE ====== //
 
@@ -83,7 +81,7 @@ export const Login = () => {
             id="email"
             value={formValues.email}
             onChange={handleChange}
-            className={formErrors.email && "input-error"}
+            className={formErrors.email && 'input-error'}
           />
           {formErrors.email && (
             <span className="error">{formErrors.email}</span>
@@ -98,7 +96,7 @@ export const Login = () => {
             id="password"
             value={formValues.password}
             onChange={handleChange}
-            className={formErrors.password && "input-error"}
+            className={formErrors.password && 'input-error'}
           />
           {formErrors.password && (
             <span className="error">{formErrors.password}</span>
@@ -108,5 +106,5 @@ export const Login = () => {
         <button type="submit">Sign In</button>
       </form>
     </div>
-  );
-};
+  )
+}
