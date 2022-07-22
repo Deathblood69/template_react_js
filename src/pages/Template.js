@@ -1,10 +1,11 @@
 import React from 'react'
-import {Providers} from "../layout/Providers";
+import {Providers} from "../providers/Providers";
 import {Route, Routes} from "react-router-dom";
 import Accueil from "./public/accueil/Accueil";
 import {Expenses} from "./public/expenses/Expenses";
 import {Invoices} from "./public/invoice/Invoices";
 import {Invoice} from "./public/invoice/Invoice";
+import {useTranslation} from "react-i18next";
 
 /**
  * Composant
@@ -13,6 +14,9 @@ import {Invoice} from "./public/invoice/Invoice";
  */
 export const Template = () => {
   // ====== PARAMETRAGE ====== //
+
+  const {i18n} = useTranslation()
+
 
   // ====== VARIABLES ====== //
 

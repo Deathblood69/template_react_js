@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Suspense} from 'react';
 import {BrowserRouter} from "react-router-dom";
 
 /**
@@ -7,9 +7,9 @@ import {BrowserRouter} from "react-router-dom";
  * @constructor
  */
 export const Providers = ({children}) => (
-  <React.Fragment>
+  <Suspense fallback="loading">
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  </React.Fragment>
+  </Suspense>
 )
