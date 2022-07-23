@@ -1,5 +1,12 @@
 {
-  "titre": "Bienvenue à React en utilisant react-i18next",
-  "apprendre_react": "Apprendre React",
-  "aujourdhui": "Aujourd'hui"
+  "accueil": {
+    "titre": "Bienvenue à React en utilisant react-i18next",
+    "description": "Apprendre React"
+  },
+  "page": {
+    "echec": "Le chargement de la page a échoué"
+  },
+  "commun": {
+    "aujourdhui": "Aujourd'hui"
+  }
 }

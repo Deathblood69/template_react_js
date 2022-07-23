@@ -1,5 +1,5 @@
 import logo from '../../../images/logo.svg'
-import '../../../css/App.css'
+import '../../../css/styles.css'
 import {useTranslation} from 'react-i18next'
 import {useState} from 'react'
 import {format, formatDistance, formatRelative, subDays} from 'date-fns'
@@ -15,34 +15,34 @@ function Accueil() {
 
   const options = [
     {
-      label: 'França"Français" value: 'fr',
- "fr" dateLocale: fr,
-    }
+      label: 'Français',
+      value: 'fr',
+      dateLocale: fr,
+    },
     {
-      label: "English",
-      value: "en",
+      label: 'English',
+      value: 'en',
       dateLocale: enGB,
     },
   ]
+  const [selectedOption, setSelectedOption] = useState(options[0])
 
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const today = new Date()
 
-  const today = new Date();
+  const moins3Jour = subDays(today, 3)
 
-  const moins3Jour = subDays(today, 3);
+  const locale = selectedOption.dateLocale
 
-  const locale = selectedOption.dateLocale;
-
-  const formatDay = format(today, "eeee dd MMMM  yyyy", { locale });
+  const formatDay = format(today, 'eeee dd MMMM  yyyy', {locale})
 
   const formatDistanceToday = formatDistance(moins3Jour, today, {
     locale,
-    addSuffix: true
-  });
+    addSuffix: true,
+  })
 
   const formatRelativeToday = formatRelative(moins3Jour, today, {
-    locale
-  });
+    locale,
+  })
 
   // ====== METHODES ====== //
 
@@ -57,16 +57,16 @@ function Accueil() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="logo animation-rotate" alt="logo" />
         <select value={selectedOption.value} onChange={handleChangeLanguage}>
-          {_.sortBy(options, ["label"]).map(option => (
+          {_.sortBy(options, ['label']).map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
           ))}
         </select>
-        <p>{t("titre")}</p>
-        <p>{`${formatDay} (${t("aujourdhui")})`}</p>
+        <p>{t('accueil.titre')}</p>
+        <p>{`${formatDay} (${t('commun.aujourdhui')})`}</p>
         <p>{`${formatRelativeToday} (${formatDistanceToday})`}</p>
 
         <a
@@ -75,7 +75,7 @@ function Accueil() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t("apprendre_react")}
+          {t('accueil.description')}
         </a>
       </header>
     </div>

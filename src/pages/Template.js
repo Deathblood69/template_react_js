@@ -1,11 +1,13 @@
-import React from 'react'
-import {Providers} from '../providers/Providers'
-import {Route, Routes} from 'react-router-dom'
-import Accueil from './public/accueil/Accueil'
-import {Expenses} from './public/expenses/Expenses'
-import {Invoices} from './public/invoice/Invoices'
-import {Invoice} from './public/invoice/Invoice'
-import {Login} from './public/login/Login'
+import React from "react";
+import { Providers } from "../providers/Providers";
+import { Route, Routes } from "react-router-dom";
+import { Expenses } from "./public/expenses/Expenses";
+import { Invoices } from "./public/invoice/Invoices";
+import { Invoice } from "./public/invoice/Invoice";
+import { Login } from "./public/login/Login";
+import { ErrorFallback } from "../composants/ErrorFallback";
+import { ErrorBoundary } from "react-error-boundary";
+import Accueil from "./public/accueil/Accueil";
 
 /**
  * Composant
@@ -13,7 +15,13 @@ import {Login} from './public/login/Login'
  * @constructor
  */
 export const Template = () => (
-  <React.Fragment>
+  <ErrorBoundary
+    FallbackComponent={ErrorFallback}
+    onReset={() => {
+      /* RAS */
+    }}
+  >
+    {console.log()}
     <Providers>
       <Routes>
         <Route path={'/'} element={<Accueil />} />
@@ -34,11 +42,11 @@ export const Template = () => (
           path="*"
           element={
             <main style={{padding: '1rem'}}>
-              <p>There's nothing here!</p>
+              <p>Th"1rem"nothing here!</p>
             </main>
           }
         />
       </Routes>
     </Providers>
-  </React.Fragment>
+  </ErrorBoundary>
 )
