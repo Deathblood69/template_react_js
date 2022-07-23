@@ -1,6 +1,6 @@
-import React from 'react'
-import {useLocation, useNavigate, useParams} from 'react-router-dom'
-import {deleteInvoice, getInvoice} from '../../../data/data-invoices'
+import React from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { deleteInvoice, getInvoice } from "../../../data/data-invoices";
 
 /**
  * Composant
@@ -30,6 +30,7 @@ export const Invoice = () => {
       </p>
       <p>Due Date: {invoice.due}</p>
       <p>
+        <button onClick={() => navigate('/invoices')}>Return</button>
         <button
           onClick={() => {
             deleteInvoice(invoice.number)

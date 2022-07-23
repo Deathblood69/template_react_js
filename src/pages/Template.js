@@ -8,6 +8,8 @@ import { Login } from "./public/login/Login";
 import { ErrorFallback } from "../composants/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
 import Accueil from "./public/accueil/Accueil";
+import { NoInvoice } from "./public/invoice/NoInvoice";
+import { Exemple } from "./public/query/Exemple";
 
 /**
  * Composant
@@ -21,23 +23,16 @@ export const Template = () => (
       /* RAS */
     }}
   >
-    {console.log()}
     <Providers>
       <Routes>
         <Route path={'/'} element={<Accueil />} />
         <Route path={'expenses'} element={<Expenses />} />
         <Route path={'invoices'} element={<Invoices />}>
-          <Route
-            index
-            element={
-              <main style={{padding: '1rem'}}>
-                <p>Select an invoice</p>
-              </main>
-            }
-          />
+          <Route index element={<NoInvoice />} />
           <Route path={':invoiceId'} element={<Invoice />} />
         </Route>
         <Route path={'login'} element={<Login />} />
+        <Route path={'exemple'} element={<Exemple />} />
         <Route
           path="*"
           element={
