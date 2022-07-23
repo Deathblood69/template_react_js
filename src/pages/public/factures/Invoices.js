@@ -1,6 +1,7 @@
-import React from 'react'
-import {NavLink, Outlet, useSearchParams} from 'react-router-dom'
-import {getInvoices} from '../../../data/data-invoices'
+import React from "react";
+import { NavLink, Outlet, useSearchParams } from "react-router-dom";
+import { getInvoices } from "../../../data/data-invoices";
+import { ROUTES } from "../../../constantes/constantes-routes";
 
 /**
  * Composant
@@ -54,7 +55,7 @@ export const Invoices = () => {
                     color: isActive ? 'red' : '',
                   }
                 }}
-                to={`/invoices/${invoice.number}`}
+                to={`${ROUTES.factures}/${invoice.number}`}
                 key={invoice.number}
               >
                 {invoice.name}

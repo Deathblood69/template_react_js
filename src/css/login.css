@@ -33,8 +33,3 @@
   font-size: 1rem;
   margin-top: 0.3rem;
 }
-
-button.disabled-btn {
-  cursor: not-allowed;
-  background: rgba(0.67, 0.39, 0, 0.66);
-}

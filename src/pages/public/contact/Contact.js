@@ -11,7 +11,7 @@ const queryClient = new QueryClient()
  * @returns {JSX.Element}
  * @constructor
  */
-export function Exemple() {
+export function Contact() {
   return (
     // Provide the client to your App
     <QueryClientProvider client={queryClient}>
@@ -28,8 +28,8 @@ const fetchData = () =>
 function Todos() {
   const {isLoading, data, status} = useQuery(['repoData'], fetchData)
 
-  const message = data.message.length
-  const hadMessage = data.message.length > 0
+  const message = data?.message?.length
+  const hadMessage = message > 0
 
   let component
   if (isLoading) {

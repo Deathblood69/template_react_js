@@ -1,21 +1,5 @@
-.App {
+.center-page {
   text-align: center;
-}
-
-.logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .animation-rotate {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,11 +8,12 @@
 
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -37,6 +22,8 @@
   }
 }
 
-.bouton-reset {
 
-}
+
+
+
+

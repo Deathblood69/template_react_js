@@ -3,10 +3,19 @@
     "titre": "Bienvenue à React en utilisant react-i18next",
     "description": "Apprendre React"
   },
-  "page": {
-    "echec": "Le chargement de la page a échoué"
-  },
   "commun": {
     "aujourdhui": "Aujourd'hui"
+  },
+  "page": {
+    "echec": "Le chargement de la page a échoué",
+    "absent": "Page non trouvée",
+    "reload": "Actualiser",
+    "last": "Page précédente"
+  },
+  "pages": {
+    "accueil": "Accueil",
+    "factures": "Factures",
+    "contact": "Contact",
+    "login": "Connexion"
   }
 }

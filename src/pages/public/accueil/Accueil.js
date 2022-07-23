@@ -1,7 +1,7 @@
+import React, {useState} from 'react'
 import logo from '../../../images/logo.svg'
 import '../../../css/styles.css'
 import {useTranslation} from 'react-i18next'
-import {useState} from 'react'
 import {format, formatDistance, formatRelative, subDays} from 'date-fns'
 import {enGB, fr} from 'date-fns/locale'
 import _ from 'lodash'
@@ -55,8 +55,8 @@ function Accueil() {
   // ====== AFFICHAGE ====== //
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <React.Fragment>
+      <div className="center-page">
         <img src={logo} className="logo animation-rotate" alt="logo" />
         <select value={selectedOption.value} onChange={handleChangeLanguage}>
           {_.sortBy(options, ['label']).map(option => (
@@ -70,15 +70,15 @@ function Accueil() {
         <p>{`${formatRelativeToday} (${formatDistanceToday})`}</p>
 
         <a
-          className="App-link"
+          className="link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           {t('accueil.description')}
         </a>
-      </header>
-    </div>
+      </div>
+    </React.Fragment>
   )
 }
 

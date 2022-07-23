@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { deleteInvoice, getInvoice } from "../../../data/data-invoices";
+import { ROUTES } from "../../../constantes/constantes-routes";
 
 /**
  * Composant
@@ -18,7 +19,7 @@ export const Invoice = () => {
 
   // ====== VARIABLES ====== //
 
-  const invoice = getInvoice(parseInt(params.invoiceId, 10))
+  const invoice = getInvoice(parseInt(params.id, 10))
 
   // ====== AFFICHAGE ====== //
 
@@ -30,11 +31,11 @@ export const Invoice = () => {
       </p>
       <p>Due Date: {invoice.due}</p>
       <p>
-        <button onClick={() => navigate('/invoices')}>Return</button>
+        <button onClick={() => navigate(ROUTES.factures)}>Return</button>
         <button
           onClick={() => {
             deleteInvoice(invoice.number)
-            navigate('/invoices' + location.search)
+            navigate(ROUTES.factures + location.search)
           }}
         >
           Delete

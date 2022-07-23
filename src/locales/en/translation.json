@@ -7,6 +7,15 @@
     "aujourdhui": "Today"
   },
   "page": {
-    "echec": "Page load failed"
+    "echec": "Page load failed",
+    "absent": "Not Found",
+    "reload": "Reload",
+    "last": "Last Page"
+  },
+  "pages": {
+    "accueil": "Home",
+    "factures": "Invoices",
+    "contact": "Contact",
+    "login": "Login"
   }
 }
