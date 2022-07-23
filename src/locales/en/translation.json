@@ -7,15 +7,16 @@
     "aujourdhui": "Today"
   },
   "page": {
-    "echec": "Page load failed",
     "absent": "Not Found",
-    "reload": "Reload",
-    "last": "Last Page"
+    "echec": "Page load failed",
+    "last": "Last Page",
+    "reload": "Reload"
   },
   "pages": {
     "accueil": "Home",
+    "query": "Contact",
     "factures": "Invoices",
-    "contact": "Contact",
-    "login": "Login"
+    "login": "Login",
+    "websocket": "Web Socket"
   }
 }

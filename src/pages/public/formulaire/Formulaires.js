@@ -8,7 +8,7 @@ import { ROUTES } from "../../../constantes/constantes-routes";
  * @returns {JSX.Element}
  * @constructor
  */
-export const Invoices = () => {
+export const Formulaires = () => {
   // ====== PARAMETRAGE ====== //
 
   const [searchParams, setSearchParams] = useSearchParams()
@@ -55,7 +55,7 @@ export const Invoices = () => {
                     color: isActive ? 'red' : '',
                   }
                 }}
-                to={`${ROUTES.factures}/${invoice.number}`}
+                to={`${ROUTES.formulaires}/${invoice.number}`}
                 key={invoice.number}
               >
                 {invoice.name}

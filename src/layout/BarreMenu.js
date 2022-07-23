@@ -14,9 +14,10 @@ export const BarreMenu = () => (
   <React.Fragment>
     <header className="topnav" id="myTopnav">
       <LabelItem route={ROUTES.accueil} />
-      <LabelItem route={ROUTES.login} isRight={true} />
-      <LabelItem route={ROUTES.factures} />
-      <LabelItem route={ROUTES.contact} />
+      <LabelItem route={ROUTES.yup} isRight={true} />
+      <LabelItem route={ROUTES.formulaires} />
+      <LabelItem route={ROUTES.query} />
+      <LabelItem route={ROUTES.websocket} />
     </header>
   </React.Fragment>
 )

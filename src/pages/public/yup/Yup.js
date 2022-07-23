@@ -6,7 +6,7 @@ import "../../../css/login.css";
  * @returns {JSX.Element}
  * @constructor
  */
-export const Login = () => {
+export const Yup = () => {
   // ====== VARIABLES ====== //
 
   const intialValues = {email: '', password: ''}

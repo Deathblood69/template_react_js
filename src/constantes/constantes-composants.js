@@ -1,9 +1,10 @@
 import Accueil from '../pages/public/accueil/Accueil'
-import {Login} from '../pages/public/login/Login'
-import {Invoices} from '../pages/public/factures/Invoices'
+import {Yup} from '../pages/public/yup/Yup'
+import {Formulaires} from '../pages/public/formulaire/Formulaires'
 import {ROUTES} from './constantes-routes'
-import {Invoice} from '../pages/public/factures/Invoice'
-import {Contact} from '../pages/public/contact/Contact'
+import {Invoice} from '../pages/public/formulaire/Invoice'
+import {Query} from '../pages/public/query/Query'
+import {WebSocketDemo} from '../pages/public/websocket/WebSocketDemo'
 
 const composants = [
   {
@@ -12,14 +13,14 @@ const composants = [
     composant: <Accueil />,
   },
   {
-    label: 'login',
-    path: ROUTES.login,
-    composant: <Login />,
+    label: 'yup',
+    path: ROUTES.yup,
+    composant: <Yup />,
   },
   {
-    label: 'factures',
-    path: ROUTES.factures,
-    composant: <Invoices />,
+    label: 'formulaire',
+    path: ROUTES.formulaires,
+    composant: <Formulaires />,
     enfants: [
       {
         label: 'facture',
@@ -29,9 +30,14 @@ const composants = [
     ],
   },
   {
-    label: 'contact',
-    path: ROUTES.contact,
-    composant: <Contact />,
+    label: 'query',
+    path: ROUTES.query,
+    composant: <Query />,
+  },
+  {
+    label: 'websocket',
+    path: ROUTES.websocket,
+    composant: <WebSocketDemo />,
   },
 ]
 

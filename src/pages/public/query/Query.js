@@ -11,7 +11,7 @@ const queryClient = new QueryClient()
  * @returns {JSX.Element}
  * @constructor
  */
-export function Contact() {
+export function Query() {
   return (
     // Provide the client to your App
     <QueryClientProvider client={queryClient}>

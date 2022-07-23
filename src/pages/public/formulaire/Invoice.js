@@ -31,11 +31,11 @@ export const Invoice = () => {
       </p>
       <p>Due Date: {invoice.due}</p>
       <p>
-        <button onClick={() => navigate(ROUTES.factures)}>Return</button>
+        <button onClick={() => navigate(ROUTES.formulaires)}>Return</button>
         <button
           onClick={() => {
             deleteInvoice(invoice.number)
-            navigate(ROUTES.factures + location.search)
+            navigate(ROUTES.formulaires + location.search)
           }}
         >
           Delete

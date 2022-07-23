@@ -1,21 +1,22 @@
 {
   "accueil": {
-    "titre": "Bienvenue à React en utilisant react-i18next",
-    "description": "Apprendre React"
+    "description": "Apprendre React",
+    "titre": "Bienvenue à React en utilisant react-i18next"
   },
   "commun": {
     "aujourdhui": "Aujourd'hui"
   },
   "page": {
-    "echec": "Le chargement de la page a échoué",
     "absent": "Page non trouvée",
-    "reload": "Actualiser",
-    "last": "Page précédente"
+    "echec": "Le chargement de la page a échoué",
+    "last": "Page précédente",
+    "reload": "Actualiser"
   },
   "pages": {
     "accueil": "Accueil",
+    "query": "Requêtes",
     "factures": "Factures",
-    "contact": "Contact",
-    "login": "Connexion"
+    "login": "Connexion",
+    "websocket": "Web Socket"
   }
 }
