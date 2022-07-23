@@ -3,10 +3,10 @@ import "../css/navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../constantes/constantes-routes";
 import { useTranslation } from "react-i18next";
-import { findLabelByPath } from "../constantes/constantes-composants";
+import { findLabelByPath } from "../constantes/constantes-pages";
 
 /**
- * Composant
+ * Composant permettant d'afficher la barre de navigation
  * @returns {JSX.Element}
  * @constructor
  */
@@ -22,6 +22,13 @@ export const BarreMenu = () => (
   </React.Fragment>
 )
 
+/**
+ * Composant permettant d'afficher un item de la barre de navigation
+ * @param route Adresse du composant lié à l'item
+ * @param isRight Permet de savoir si le composant est attaché à droite de la barre
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const LabelItem = ({route, isRight = false}) => {
   // ====== PARAMETRAGE ====== //
 

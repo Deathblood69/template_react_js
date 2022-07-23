@@ -15,8 +15,8 @@
   "pages": {
     "accueil": "Home",
     "query": "Contact",
-    "factures": "Invoices",
-    "login": "Login",
+    "formulaire": "Forms",
+    "yup": "Yup",
     "websocket": "Web Socket"
   }
 }

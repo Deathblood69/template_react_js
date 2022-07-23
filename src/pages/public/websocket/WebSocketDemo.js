@@ -2,24 +2,13 @@ import React, {useCallback, useEffect, useState} from 'react'
 import useWebSocket, {ReadyState} from 'react-use-websocket'
 
 export const WebSocketDemo = () => {
-  //Public API that will echo messages sent to it back to the client
+  // ====== VARIABLES ====== //
+
   const [socketUrl, setSocketUrl] = useState('wss://echo.websocket.org')
+
   const [messageHistory, setMessageHistory] = useState([])
 
   const {sendMessage, lastMessage, readyState} = useWebSocket(socketUrl)
-
-  useEffect(() => {
-    if (lastMessage !== null) {
-      setMessageHistory(prev => prev.concat(lastMessage))
-    }
-  }, [lastMessage, setMessageHistory])
-
-  const handleClickChangeSocketUrl = useCallback(
-    () => setSocketUrl('wss://demos.kaazing.com/echo'),
-    [],
-  )
-
-  const handleClickSendMessage = useCallback(() => sendMessage('Hello'), [])
 
   const connectionStatus = {
     [ReadyState.CONNECTING]: 'Connecting',
@@ -28,6 +17,25 @@ export const WebSocketDemo = () => {
     [ReadyState.CLOSED]: 'Closed',
     [ReadyState.UNINSTANTIATED]: 'Uninstantiated',
   }[readyState]
+
+  // ====== METHODES ====== //
+
+  const handleClickChangeSocketUrl = useCallback(
+    () => setSocketUrl('wss://demos.kaazing.com/echo'),
+    [],
+  )
+
+  const handleClickSendMessage = useCallback(() => sendMessage('Hello'), [])
+
+  // ====== USE EFFECT ====== //
+
+  useEffect(() => {
+    if (lastMessage !== null) {
+      setMessageHistory(prev => prev.concat(lastMessage))
+    }
+  }, [lastMessage, setMessageHistory])
+
+  // ====== AFFICHAGE ====== //
 
   return (
     <div>

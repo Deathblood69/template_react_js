@@ -7,29 +7,44 @@ import logo from "../../../images/logo.svg";
 const queryClient = new QueryClient()
 
 /**
- * Composant
+ * Composant permettant de faire une requête HTTP
  * @returns {JSX.Element}
  * @constructor
  */
 export function Query() {
   return (
-    // Provide the client to your App
     <QueryClientProvider client={queryClient}>
       <Todos />
     </QueryClientProvider>
   )
 }
 
+/**
+ * Fonction permettant de récupérer des données
+ * @returns {Promise<any>}
+ */
 const fetchData = () =>
   fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
     res.json(),
   )
 
-function Todos() {
+/**
+ * Composant
+ * @returns {any}
+ * @constructor
+ */
+const Todos = () => {
+  // ====== PARAMETRAGE ====== //
+
   const {isLoading, data, status} = useQuery(['repoData'], fetchData)
 
+  // ====== VARIABLES ====== //
+
   const message = data?.message?.length
+
   const hadMessage = message > 0
+
+  // ====== AFFICHAGE ====== //
 
   let component
   if (isLoading) {

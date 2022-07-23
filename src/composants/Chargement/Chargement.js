@@ -3,7 +3,8 @@ import React from "react";
 import "./chargement.css";
 
 /**
- * Composant
+ * Composant permettant d'afficher une image pivotant à 360°
+ * @param logo Image à faire pivoter
  * @returns {JSX.Element}
  * @constructor
  */

@@ -5,24 +5,10 @@ import React from "react";
  * @returns {JSX.Element}
  * @constructor
  */
-export const NoInvoice = () => {
-  // ====== PARAMETRAGE ====== //
-
-  // ====== VARIABLES ====== //
-
-  // ====== REQUETES ====== //
-
-  // ====== METHODES ====== //
-
-  // ====== USE EFFECT ====== //
-
-  // ====== AFFICHAGE ====== //
-
-  return (
-    <React.Fragment>
-      <main style={{padding: '1rem'}}>
-        <p>Select an invoice</p>
-      </main>
-    </React.Fragment>
-  )
-}
+export const NoInvoice = () => (
+  <React.Fragment>
+    <main style={{padding: '1rem'}}>
+      <p>Select an invoice</p>
+    </main>
+  </React.Fragment>
+)

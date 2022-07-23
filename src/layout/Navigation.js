@@ -2,10 +2,11 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { PageErreur } from "../composants/PageErreur";
 import logo_404 from "../images/404.png";
-import { getRoutes } from "../constantes/constantes-composants";
+import { getRoutes } from "../constantes/constantes-pages";
 
 /**
- * Composant
+ * Composant permettant d'afficher l'ensembles des composants de l'application
+ * @param navigateLastPage Fonction permettant de revenir à la page précédente
  * @returns {JSX.Element}
  * @constructor
  */

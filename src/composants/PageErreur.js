@@ -3,7 +3,11 @@ import erreur from "../images/delete.svg";
 import { useTranslation } from "react-i18next";
 
 /**
- * Composant
+ * Composant permettant d'afficher les erreurs reçues par l'application
+ * @param resetErrorBoundary Fonction à executer au rechargement de l'application
+ * @param icone Icone à afficher sur la page d'erreur
+ * @param message Message à afficher sous l'icone
+ * @param messageBouton Message sur le bouton rechargeant la page
  * @returns {JSX.Element}
  * @constructor
  */
@@ -13,7 +17,13 @@ export function PageErreur({
   message,
   messageBouton,
 }) {
+  // ====== PARAMETRAGE ====== //
+
+  /** Hook de traduction */
   const {t} = useTranslation()
+
+  // ====== AFFICHAGE ====== //
+
   return (
     <div className="center-page">
       <header className="center-page">

@@ -6,7 +6,7 @@ import { Navigation } from "../layout/Navigation";
 import { BarreMenu } from "../layout/BarreMenu";
 
 /**
- * Composant
+ * Composant servant de base à l'application
  * @returns {JSX.Element}
  * @constructor
  */

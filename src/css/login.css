@@ -1,9 +1,13 @@
+/* ====== Page de styles associés au composant Login.js ====== */
+
+/* Style du container de la page de connexion */
 .container {
   margin-top: 5rem;
   padding: 3rem;
   border-radius: 4px;
 }
 
+/* Style du message de succès */
 .success-msg {
   color: #1d3557;
   background: #8fffab;
@@ -17,6 +21,7 @@
   font-weight: 600;
 }
 
+/** Ligne de chaque champ du formulaire de login */
 .form-row {
   display: flex;
   flex-direction: column;

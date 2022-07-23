@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 /**
- * Composant
+ * Composant permettant d'utiliser le changement d'adresse dans l'application
  * @returns {JSX.Element}
  * @constructor
  */

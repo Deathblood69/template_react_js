@@ -4,7 +4,7 @@ import { Chargement } from "../composants/Chargement/Chargement";
 import "../images/logo.svg";
 
 /**
- * Composant
+ * Composant permettant de fournir des contextes à l'application
  * @returns {JSX.Element}
  * @constructor
  */
